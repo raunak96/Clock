@@ -5,7 +5,7 @@ const setClockHands = () => {
 	const secs = currentTime.getSeconds();
 
 	/* Digital CLock */
-	const ampm = hrs % 12 > 0 ? "pm" : "am";
+	const ampm = hrs / 12 ? "pm" : "am";
 	digitaltime.innerText = `${hrs < 10 ? `0${hrs}` : hrs} : ${
 		mins < 10 ? `0${mins}` : mins
 	} ${ampm}`;
